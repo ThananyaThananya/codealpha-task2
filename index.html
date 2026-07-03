@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Image Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Fruit Image Gallery</h1>
+
+<div class="buttons">
+<button onclick="filterSelection('all')">All</button>
+<button onclick="filterSelection('tropical')">Tropical</button>
+<button onclick="filterSelection('citrus')">Citrus</button>
+<button onclick="filterSelection('berries')">Berries</button>
+</div>
+
+<div class="gallery">
+
+<div class="image tropical">
+<img src="mango.jpg" onclick="openLightbox(0)">
+<p>Mango</p>
+</div>
+
+<div class="image citrus">
+<img src="orange.jpg" onclick="openLightbox(1)">
+<p>Orange</p>
+</div>
+
+<div class="image tropical">
+<img src="banana.jpg" onclick="openLightbox(2)">
+<p>Banana</p>
+</div>
+
+<div class="image berries">
+<img src="grapes.jpg" onclick="openLightbox(3)">
+<p>Grapes</p>
+</div>
+
+<div class="image">
+<img src="apple.jpg" onclick="openLightbox(4)">
+<p>Apple</p>
+</div>
+
+<div class="image">
+<img src="watermelon.jpg" onclick="openLightbox(5)">
+<p>Watermelon</p>
+</div>
+
+</div>
+
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<button class="prev" onclick="changeImage(-1)">❮</button>
+
+<img id="lightbox-img">
+
+<button class="next" onclick="changeImage(1)">❯</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
